@@ -1,18 +1,33 @@
+import kotlin.contracts.Returns
+
 fun main(){
 var school = "AkiraChix"
  println(school[1]+""+school[3]+""+school[4])
-statement("Ruth" ,"19")
- length("42")
-name("")
-}
-fun statement(fullname:String,age:String){
- println("Hi," + " " + "My name is" + " "+fullname+ " "+"and I am"+" " +age+"Years Old")
+ printname("Ruth" ,19)
+ getlength("I love it")
+ println(truename("caren"))
 
-}
-fun length(Int:String){
- println(Int + " " +"cm" )
-}
-fun name(ruth:String){
- println("That's Me")
+ }
 
+
+fun printname(name:String,age:Int):String{
+val statement = " Hi, My name is $name and I am $age years old"
+ return statement
+ }
+
+ fun getlength(length:String):Int{
+  val length =length.length
+ return length
+
+ }
+
+fun truename(name:String){
+ val r = "ruth"
+ if (r==(name))
+  println("That's me!")
+ else
+  println("I don't know who that is")
 }
+
+
+
